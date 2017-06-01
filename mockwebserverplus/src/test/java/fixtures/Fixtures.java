@@ -13,4 +13,5 @@ public class Fixtures {
   public static final String SIMPLE_NO_HEADERS = "simple_no_headers";
   public static final String SIMPLE_NO_STATUS_CODE = "simple_no_status_code";
   public static final String SIMPLE_WITH_DELAY = "simple_with_delay";
+  public static final String SIMPLE_ARRAY = "simple_array";
 }
