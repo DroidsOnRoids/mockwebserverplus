@@ -1,0 +1,9 @@
+statusCode : 200
+delay: 0
+headers:
+- 'Auth:auth'
+- 'key:value'
+body: >
+    [
+      1, 2, 3
+    ]
