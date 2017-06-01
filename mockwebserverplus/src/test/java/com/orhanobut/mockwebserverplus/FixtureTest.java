@@ -68,4 +68,15 @@ public class FixtureTest {
         "}");
     assertThat(fixture.headers).containsExactly("Auth:auth", "key:value");
   }
+    
+  @Test public void parseFixtureWithArrayBody() {
+    Fixture fixture = Fixture.parseFrom(Fixtures.SIMPLE_ARRAY, parser);
+
+    assertThat(fixture.statusCode).isEqualTo(200);
+    assertThat(fixture.delay).isEqualTo(0);
+    assertThat(fixture.body).isEqualTo("[\n" +
+        "  1, 2, 3" +
+        "]");
+    assertThat(fixture.headers).containsExactly("Auth:auth", "key:value");
+  }
 }
