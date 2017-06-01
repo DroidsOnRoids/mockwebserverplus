@@ -40,7 +40,7 @@ public class Fixture {
     InputStream inputStream = openPathAsStream(path);
     Fixture result = parser.parse(inputStream);
 
-    if (result.body != null && !result.body.startsWith("{")) {
+    if (result.body != null && !result.body.startsWith("{") && !result.body.startsWith("[")) {
       String bodyPath = "fixtures/" + result.body;
       try {
         result.body = readPathIntoString(bodyPath);
